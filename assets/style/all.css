@@ -1,0 +1,1248 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  position: relative; }
+
+a {
+  text-decoration: none; }
+
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto; }
+  @media (max-width: 414px) {
+    .container {
+      width: 95%; } }
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative; }
+  .header .logo {
+    width: 128px;
+    height: 38px;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfume.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; }
+    @media (max-width: 414px) {
+      .header .logo {
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfume%402x.png"); } }
+    .header .logo a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      text-indent: 101%;
+      overflow: hidden;
+      white-space: nowrap; }
+  .header .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .header .menu .MB-blog,
+    .header .menu .MB-contact,
+    .header .menu .MB-login {
+      display: none; }
+    @media (max-width: 414px) {
+      .header .menu {
+        width: 112%;
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: -6%;
+        z-index: 2; }
+        .header .menu .PC-cart,
+        .header .menu .PC-login {
+          display: none; }
+        .header .menu .MB-blog,
+        .header .menu .MB-contact,
+        .header .menu .MB-mypage,
+        .header .menu .MB-login {
+          display: block; } }
+    .header .menu li + li {
+      margin-left: 32px; }
+      @media (max-width: 414px) {
+        .header .menu li + li {
+          margin-left: 0; } }
+    .header .menu li a {
+      display: block;
+      color: #8d8d8d;
+      font: normal normal normal 20px/30px SF Pro Text;
+      padding: 20px 0;
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s;
+      position: relative; }
+      @media (max-width: 414px) {
+        .header .menu li a {
+          padding: 16px 0;
+          background-color: rgba(0, 0, 0, 0.8);
+          text-align: center;
+          color: #fff;
+          border-bottom: 1px solid #fff; }
+          .header .menu li a .fas {
+            display: none; } }
+      .header .menu li a:hover {
+        color: #000; }
+      .header .menu li a:after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background-color: #000;
+        position: absolute;
+        left: 0;
+        bottom: 15px;
+        -webkit-transform: scale(0);
+            -ms-transform: scale(0);
+                transform: scale(0);
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s; }
+      .header .menu li a:hover:after {
+        -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+                transform: scale(1); }
+  .header .mobile-group {
+    display: none; }
+    @media (max-width: 414px) {
+      .header .mobile-group {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        padding: 20px 0;
+        position: relative; }
+        .header .mobile-group .box {
+          display: block;
+          width: 40px;
+          height: 5px;
+          background-color: #707070;
+          border-radius: 30px;
+          -webkit-box-shadow: 0 14px 0 #707070, 0 -14px 0 #707070;
+                  box-shadow: 0 14px 0 #707070, 0 -14px 0 #707070;
+          margin-left: 36px;
+          cursor: pointer; }
+        .header .mobile-group .cart {
+          font-size: 20px;
+          color: #8d8d8d; }
+        .header .mobile-group .number {
+          color: #fff;
+          position: absolute;
+          font: normal normal normal 12px/30px SF Pro Text;
+          top: 2px;
+          left: 20px; }
+          .header .mobile-group .number::after {
+            content: "";
+            width: 16px;
+            height: 13px;
+            background-color: #916000;
+            position: absolute;
+            top: 8px;
+            left: -4px;
+            z-index: -1;
+            border-radius: 7px; } }
+
+.footer-bottom {
+  background-color: #916000; }
+  .footer-bottom .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    position: relative; }
+    @media (max-width: 414px) {
+      .footer-bottom .container {
+        padding: 20px 0; } }
+    .footer-bottom .container .logo {
+      width: 128px;
+      height: 38px;
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/d%E2%80%99Perfumewhite.png");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover; }
+      .footer-bottom .container .logo a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        text-indent: 101%;
+        overflow: hidden;
+        white-space: nowrap; }
+    .footer-bottom .container .copyRight {
+      color: #fff;
+      font: normal normal medium 14px/21px SF Pro Text;
+      position: absolute;
+      left: 148px;
+      top: 30px; }
+      @media (max-width: 414px) {
+        .footer-bottom .container .copyRight {
+          top: 0;
+          bottom: 0;
+          right: -10px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; } }
+    .footer-bottom .container .menu {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      @media (max-width: 414px) {
+        .footer-bottom .container .menu {
+          display: none; } }
+      .footer-bottom .container .menu li + li {
+        margin-left: 36px; }
+      .footer-bottom .container .menu li a {
+        display: block;
+        color: #fff;
+        font: normal normal normal 20px/30px SF Pro Text;
+        padding: 20px 0;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s;
+        position: relative; }
+        .footer-bottom .container .menu li a:hover {
+          color: #000; }
+        .footer-bottom .container .menu li a:after {
+          content: "";
+          width: 100%;
+          height: 2px;
+          background-color: #000;
+          position: absolute;
+          left: 0;
+          bottom: 15px;
+          -webkit-transform: scale(0);
+              -ms-transform: scale(0);
+                  transform: scale(0);
+          -webkit-transition: 0.5s;
+          -o-transition: 0.5s;
+          transition: 0.5s; }
+        .footer-bottom .container .menu li a:hover:after {
+          -webkit-transform: scale(1);
+              -ms-transform: scale(1);
+                  transform: scale(1); }
+
+.breadcrumb {
+  background-color: #916000; }
+  @media (max-width: 414px) {
+    .breadcrumb {
+      display: none; } }
+  .breadcrumb .nav-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .breadcrumb .nav-bar li + li {
+      margin-left: 28px; }
+    .breadcrumb .nav-bar li a {
+      display: block;
+      color: #fff;
+      padding: 14px 0;
+      font: normal normal normal 20px/30px SF Pro Text;
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s; }
+      .breadcrumb .nav-bar li a:hover {
+        color: #000;
+        -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+                transform: scale(1.2); }
+
+.footer-content {
+  height: 600px;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index10.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative; }
+  @media (max-width: 414px) {
+    .footer-content {
+      background-position: left center; } }
+  .footer-content .container {
+    padding-top: 310px; }
+    .footer-content .container .title {
+      color: #8d8d8d;
+      font: normal normal 600 32px/48px PingFang TC; }
+      .footer-content .container .title .block {
+        display: block; }
+    .footer-content .container .subscribe-group {
+      width: 30%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-top: 20px;
+      border: 2px solid #916000;
+      border-radius: 4px;
+      border-right: none; }
+      @media (max-width: 414px) {
+        .footer-content .container .subscribe-group {
+          width: 100%; } }
+      .footer-content .container .subscribe-group input {
+        padding: 20px;
+        border: none;
+        outline: none; }
+        @media (max-width: 768px) {
+          .footer-content .container .subscribe-group input {
+            padding: 20px 10px; } }
+      .footer-content .container .subscribe-group .email {
+        width: 65%; }
+        @media (max-width: 414px) {
+          .footer-content .container .subscribe-group .email {
+            width: 60%; } }
+        .footer-content .container .subscribe-group .email::-webkit-input-placeholder {
+          color: #8d8d8d;
+          font: normal normal medium 16px/24px SF Pro Text; }
+        .footer-content .container .subscribe-group .email::-moz-placeholder {
+          color: #8d8d8d;
+          font: normal normal medium 16px/24px SF Pro Text; }
+        .footer-content .container .subscribe-group .email:-ms-input-placeholder {
+          color: #8d8d8d;
+          font: normal normal medium 16px/24px SF Pro Text; }
+        .footer-content .container .subscribe-group .email::-ms-input-placeholder {
+          color: #8d8d8d;
+          font: normal normal medium 16px/24px SF Pro Text; }
+        .footer-content .container .subscribe-group .email::placeholder {
+          color: #8d8d8d;
+          font: normal normal medium 16px/24px SF Pro Text; }
+      .footer-content .container .subscribe-group .subscribe {
+        width: 35%;
+        color: #fff;
+        background-color: #916000;
+        font: normal normal medium 16px/24px SF Pro Text;
+        margin-left: 1px;
+        cursor: pointer;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s; }
+        @media (max-width: 414px) {
+          .footer-content .container .subscribe-group .subscribe {
+            width: 40%; } }
+        .footer-content .container .subscribe-group .subscribe:hover {
+          color: #000;
+          font-weight: bold; }
+
+.collect-added,
+.cart-added {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: none; }
+  .collect-added .message,
+  .cart-added .message {
+    width: 540px;
+    height: 62px;
+    color: #916000;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    border-radius: 4px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font: normal normal 600 20px/28px PingFang TC; }
+    @media (max-width: 414px) {
+      .collect-added .message,
+      .cart-added .message {
+        width: 165px; } }
+
+.banner {
+  height: 870px;
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index1.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+  @media (max-width: 414px) {
+    .banner {
+      height: 480px;
+      background-position: left center; } }
+  .banner .container {
+    position: relative;
+    height: 100%; }
+    .banner .container .banner-text {
+      width: 40%;
+      color: #fff;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      @media (max-width: 414px) {
+        .banner .container .banner-text {
+          width: 100%; } }
+      .banner .container .banner-text .title {
+        font: normal normal bold 40px/60px SF Pro Text; }
+        @media (max-width: 414px) {
+          .banner .container .banner-text .title {
+            font: normal normal bold 32px/48px SF Pro Text; } }
+      .banner .container .banner-text .text {
+        font: normal normal normal 24px/36px SF Pro Text; }
+        @media (max-width: 414px) {
+          .banner .container .banner-text .text {
+            font: normal normal normal 20px/30px SF Pro Text; } }
+      .banner .container .banner-text .button {
+        width: 80%;
+        display: block;
+        color: #fff;
+        border: 2px solid #fff;
+        border-radius: 30px;
+        text-align: center;
+        margin-top: 16px;
+        font: normal normal bold 36px/60px SF Pro Text;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s; }
+        .banner .container .banner-text .button:hover {
+          background-color: #000; }
+        @media (max-width: 414px) {
+          .banner .container .banner-text .button {
+            width: 100%;
+            font: normal normal medium 28px/42px SF Pro Text; } }
+
+.product-list {
+  padding: 60px 0; }
+  @media (max-width: 414px) {
+    .product-list {
+      padding: 40px 0; } }
+  .product-list .product {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    @media (max-width: 414px) {
+      .product-list .product {
+        display: block; }
+        .product-list .product + .product {
+          margin-top: 32px; } }
+    .product-list .product:nth-child(odd) {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: row-reverse;
+              flex-direction: row-reverse; }
+    .product-list .product .pic {
+      width: 50%;
+      background-size: cover;
+      background-repeat: no-repeat; }
+      @media (max-width: 414px) {
+        .product-list .product .pic {
+          width: 100%; } }
+    .product-list .product .perfume-one {
+      height: 555px;
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index2.jpg");
+      background-position: top center; }
+      @media (max-width: 414px) {
+        .product-list .product .perfume-one {
+          height: 350px; } }
+    .product-list .product .perfume-two {
+      height: 555px;
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index3.png");
+      background-position: center center; }
+      @media (max-width: 414px) {
+        .product-list .product .perfume-two {
+          height: 350px; } }
+    .product-list .product .perfume-three {
+      height: 555px;
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index4.jpg");
+      background-position: left center; }
+      @media (max-width: 414px) {
+        .product-list .product .perfume-three {
+          height: 350px; } }
+    .product-list .product .perfume-four {
+      height: 1000px;
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index5.jpg");
+      background-position: right center; }
+      @media (max-width: 414px) {
+        .product-list .product .perfume-four {
+          height: 680px; } }
+    .product-list .product-content {
+      width: 50%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      padding: 0 8%; }
+      @media (max-width: 414px) {
+        .product-list .product-content {
+          width: 100%;
+          padding: 0; } }
+      .product-list .product-content .sub-product + .sub-product {
+        margin-top: 52px; }
+        @media (max-width: 414px) {
+          .product-list .product-content .sub-product + .sub-product {
+            margin-top: 20px; } }
+      .product-list .product-content .title {
+        font: normal normal bold 32px/48px SF Pro Text; }
+        @media (max-width: 414px) {
+          .product-list .product-content .title {
+            font: normal normal 600 24px/36px SF Pro Text; } }
+      .product-list .product-content .text {
+        font: normal normal 300 20px/30px PingFang TC; }
+        @media (max-width: 414px) {
+          .product-list .product-content .text {
+            font: normal normal 300 16px/24px SF Pro Text; } }
+      .product-list .product-content .button-more {
+        width: 20%;
+        color: #ac8a46;
+        margin-top: 16px;
+        font: normal normal 600 16px/24px PingFang TC;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s; }
+        @media (max-width: 414px) {
+          .product-list .product-content .button-more {
+            margin-top: 8px; } }
+        .product-list .product-content .button-more:hover {
+          -webkit-transform: scale(1.2);
+              -ms-transform: scale(1.2);
+                  transform: scale(1.2); }
+      .product-list .product-content .sub-title {
+        font: normal normal 600 24px/36px SF Pro Text; }
+        .product-list .product-content .sub-title .block {
+          display: block; }
+      .product-list .product-content .sub-text {
+        font: normal normal 300 16px/24px SF Pro Text; }
+      .product-list .product-content .button-plan {
+        display: block;
+        color: #000;
+        font: normal normal medium 20px/30px SF Pro Text;
+        padding: 18px 0;
+        text-align: center;
+        border: 2px solid #000000;
+        border-radius: 30px;
+        margin-top: 60px;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s; }
+        @media (max-width: 414px) {
+          .product-list .product-content .button-plan {
+            margin-top: 20px; } }
+        .product-list .product-content .button-plan:hover {
+          color: #fff;
+          background-color: #000;
+          font-size: 18px; }
+
+.product-item {
+  background-color: #e0e0e0; }
+  .product-item .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 40px 0; }
+    @media (max-width: 414px) {
+      .product-item .container {
+        display: block;
+        padding: 32px 0; } }
+    .product-item .container .item {
+      width: 31%; }
+      @media (max-width: 414px) {
+        .product-item .container .item {
+          width: 100%; }
+          .product-item .container .item + .item {
+            margin-top: 32px; } }
+      .product-item .container .item .pic {
+        height: 540px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center; }
+        @media (max-width: 414px) {
+          .product-item .container .item .pic {
+            height: 350px; } }
+      .product-item .container .item .item-one {
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index6.jpg"); }
+        @media (max-width: 414px) {
+          .product-item .container .item .item-one {
+            background-position: bottom center; } }
+      .product-item .container .item .item-two {
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index7.jpg"); }
+      .product-item .container .item .item-three {
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index8.jpg");
+        position: relative; }
+        .product-item .container .item .item-three .sold-out {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          background-color: rgba(0, 0, 0, 0.4);
+          color: #fff;
+          font: normal normal 600 24px/36px SF Pro Text;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; }
+      .product-item .container .item .title {
+        font: normal normal 600 24px/36px SF Pro Text; }
+      .product-item .container .item .sub-title {
+        font: normal normal 300 16px/24px SF Pro Text; }
+      .product-item .container .item .price {
+        font: normal normal 300 16px/24px SF Pro Text;
+        margin-top: 16px; }
+        @media (max-width: 414px) {
+          .product-item .container .item .price {
+            margin-top: 4px; } }
+        .product-item .container .item .price .original-price {
+          color: #8d8d8d;
+          text-decoration: line-through;
+          margin-left: 8px; }
+
+.product-card .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 60px 0; }
+  @media (max-width: 414px) {
+    .product-card .container {
+      display: block;
+      padding: 40px 0; } }
+  .product-card .container .pic {
+    width: 65.5%;
+    height: 520px;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index9.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; }
+    @media (max-width: 414px) {
+      .product-card .container .pic {
+        width: 100%; } }
+  .product-card .container .text {
+    width: 31%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    @media (max-width: 414px) {
+      .product-card .container .text {
+        width: 100%; } }
+    .product-card .container .text .title {
+      font: normal normal bold 32px/48px SF Pro Text; }
+    .product-card .container .text .sub-title {
+      font: normal normal 300 20px/30px SF Pro Text; }
+    .product-card .container .text .text {
+      width: 100%;
+      font: normal normal 300 16px/24px SF Pro Text;
+      margin: 16px 0; }
+      @media (max-width: 414px) {
+        .product-card .container .text .text {
+          margin: 8px 0; } }
+    .product-card .container .text .button-more {
+      width: 25%;
+      color: #ac8a46;
+      font: normal normal 600 16px/24px PingFang TC;
+      -webkit-transition: 0.5s;
+      -o-transition: 0.5s;
+      transition: 0.5s; }
+      .product-card .container .text .button-more:hover {
+        -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+                transform: scale(1.2); }
+
+.product-classify {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 80px 0; }
+  @media (max-width: 414px) {
+    .product-classify {
+      padding: 40px 0; } }
+  .product-classify .item {
+    width: 23%; }
+    @media (max-width: 414px) {
+      .product-classify .item {
+        width: 48%; }
+        .product-classify .item:nth-child(n + 3) {
+          margin-top: 30px; } }
+    .product-classify .item .pic {
+      height: 255px;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+      @media (max-width: 414px) {
+        .product-classify .item .pic {
+          height: 165px; } }
+    .product-classify .item .item-one {
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/products1.jpg"); }
+    .product-classify .item .item-two {
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index6.jpg");
+      background-position: bottom center; }
+    .product-classify .item .item-three {
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/products3.jpg"); }
+    .product-classify .item .item-four {
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/products4.jpg");
+      background-position: top center; }
+    .product-classify .item .item-five {
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/products5.jpg"); }
+    .product-classify .item .item-six {
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index4.jpg");
+      background-position: left center; }
+    .product-classify .item .item-seven {
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/products7.jpg"); }
+    .product-classify .item .item-eight {
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/products8.jpg"); }
+    .product-classify .item .item-nine {
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/index3.png"); }
+    .product-classify .item .item-ten {
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/products10.jpg"); }
+    .product-classify .item .item-eleven {
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/products11.jpg"); }
+    .product-classify .item .item-twelve {
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/products12.jpg"); }
+    .product-classify .item .title {
+      font: normal normal 600 24px/36px SF Pro Text; }
+      @media (max-width: 414px) {
+        .product-classify .item .title {
+          font: normal normal 600 20px/30px SF Pro Text; } }
+    .product-classify .item .sub-title {
+      font: normal normal 300 16px/24px SF Pro Text; }
+    .product-classify .item .price {
+      font: normal normal 300 16px/24px SF Pro Text; }
+      .product-classify .item .price .original-price {
+        color: #8d8d8d;
+        text-decoration: line-through;
+        margin-left: 8px; }
+    .product-classify .item .fas {
+      font-size: 20px;
+      color: #916000;
+      margin-right: 10px;
+      margin-top: 2px;
+      cursor: pointer; }
+    .product-classify .item:nth-child(n + 5) {
+      margin-top: 60px; }
+      @media (max-width: 414px) {
+        .product-classify .item:nth-child(n + 5) {
+          margin-top: 30px; } }
+
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 60px; }
+  @media (max-width: 414px) {
+    .pagination {
+      margin-bottom: 40px; } }
+  .pagination li a {
+    color: #000;
+    font: normal normal normal 20px/30px SF Pro Text; }
+  .pagination li + li {
+    margin-left: 20px; }
+  .pagination .default {
+    color: #ac8a46;
+    position: relative; }
+    .pagination .default::after {
+      content: "";
+      width: 20px;
+      height: 2px;
+      background-color: #ac8a46;
+      position: absolute;
+      left: -5px;
+      bottom: 0; }
+
+.product-intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 80px 0 60px; }
+  @media (max-width: 414px) {
+    .product-intro {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+          -ms-flex-direction: column-reverse;
+              flex-direction: column-reverse;
+      padding: 40px 0; } }
+  .product-intro .MB-pic {
+    display: none; }
+    @media (max-width: 414px) {
+      .product-intro .MB-pic {
+        display: block;
+        height: 220px;
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/product1.jpg");
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat; } }
+  .product-intro .pic-group {
+    width: 66%; }
+    @media (max-width: 414px) {
+      .product-intro .pic-group {
+        width: 100%; } }
+    .product-intro .pic-group li {
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+      .product-intro .pic-group li + li {
+        margin-top: 30px; }
+        @media (max-width: 414px) {
+          .product-intro .pic-group li + li {
+            margin-top: 16px; } }
+    .product-intro .pic-group .pic-one {
+      height: 460px;
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/product1.jpg"); }
+      @media (max-width: 414px) {
+        .product-intro .pic-group .pic-one {
+          display: none; } }
+    .product-intro .pic-group .pic-two {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      .product-intro .pic-group .pic-two .common {
+        width: 48%;
+        height: 640px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat; }
+        @media (max-width: 414px) {
+          .product-intro .pic-group .pic-two .common {
+            width: 100%; } }
+      .product-intro .pic-group .pic-two .sub-pic-one {
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/product2.jpg"); }
+      .product-intro .pic-group .pic-two .sub-pic-two {
+        background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/product3.jpg"); }
+        @media (max-width: 414px) {
+          .product-intro .pic-group .pic-two .sub-pic-two {
+            margin-top: 16px; } }
+    .product-intro .pic-group .pic-three {
+      height: 460px;
+      background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/product1.jpg"); }
+  .product-intro .intro {
+    width: 32%; }
+    @media (max-width: 414px) {
+      .product-intro .intro {
+        width: 100%;
+        margin-top: 28px; } }
+    .product-intro .intro .title {
+      font: normal normal bold 32px/48px SF Pro Text; }
+    .product-intro .intro .text {
+      font: normal normal 300 20px/30px PingFang TC; }
+    .product-intro .intro .price {
+      font: normal normal 300 20px/30px SF Pro Text;
+      margin: 32px 0 12px; }
+    .product-intro .intro .order-info {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      border: 1px solid #916000;
+      border-radius: 4px; }
+      .product-intro .intro .order-info select {
+        width: 50%;
+        outline: none;
+        border: none;
+        border-radius: 4px 0 0 4px; }
+      .product-intro .intro .order-info .submit {
+        width: 50%;
+        padding: 14px 0;
+        outline: none;
+        border: none;
+        color: #fff;
+        background-color: #916000;
+        font: normal normal normal 16px/22px PingFang TC;
+        cursor: pointer; }
+    .product-intro .intro .collection {
+      display: block;
+      margin: 8px 0 80px;
+      color: #000;
+      font: normal normal normal 16px/24px PingFang TC; }
+      @media (max-width: 414px) {
+        .product-intro .intro .collection {
+          margin: 8px 0 40px; } }
+      .product-intro .intro .collection.active .heart {
+        color: #916000; }
+    .product-intro .intro .notification li + li {
+      margin-top: 20px; }
+    .product-intro .intro .notification .sub-title {
+      font: normal normal medium 16px/24px SF Pro Text; }
+    .product-intro .intro .notification .text {
+      font: normal normal 300 16px/24px PingFang TC;
+      margin-top: 8px; }
+
+.login-platform {
+  padding: 80px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  @media (max-width: 414px) {
+    .login-platform {
+      padding: 40px 0; } }
+  .login-platform .pic {
+    width: 66%;
+    height: 730px;
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/perfume-week6/login1.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; }
+    @media (max-width: 414px) {
+      .login-platform .pic {
+        width: 100%;
+        height: 220px; } }
+  .login-platform .platform {
+    width: 32%; }
+    @media (max-width: 414px) {
+      .login-platform .platform {
+        width: 100%;
+        margin: 30px 0 60px; } }
+    .login-platform .platform .title {
+      font: normal normal bold 32px/48px SF Pro Text;
+      margin-bottom: 12px; }
+    .login-platform .platform label {
+      font: normal normal normal 16px/22px PingFang TC; }
+    .login-platform .platform input {
+      width: 100%;
+      display: block;
+      border: 1px solid #ced4da;
+      padding: 10px 12px;
+      outline: none; }
+    .login-platform .platform .mt {
+      margin-top: 20px; }
+    .login-platform .platform .button-group {
+      margin-top: 36px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .login-platform .platform .button-group .forget {
+        color: #916000;
+        font: normal normal medium 16px/24px PingFang TC;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s; }
+        .login-platform .platform .button-group .forget:hover {
+          color: #000; }
+      .login-platform .platform .button-group .register {
+        font: normal normal normal 16px/22px PingFang TC;
+        padding: 8px 16px;
+        border: 1px solid #916000;
+        border-radius: 4px;
+        color: #916000;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s; }
+        .login-platform .platform .button-group .register:hover {
+          color: #fff;
+          background-color: #000; }
+      .login-platform .platform .button-group .login {
+        padding: 8px 16px;
+        background-color: #916000;
+        border: 1px solid #916000;
+        border-radius: 4px;
+        color: #fff;
+        margin-left: 8px;
+        -webkit-transition: 0.5s;
+        -o-transition: 0.5s;
+        transition: 0.5s; }
+        .login-platform .platform .button-group .login:hover {
+          color: #000;
+          background-color: #fff; }
+
+.member-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 80px 0 60px; }
+  @media (max-width: 414px) {
+    .member-group {
+      padding: 40px 0; } }
+  .member-group .member-center {
+    width: 15%; }
+    @media (max-width: 414px) {
+      .member-group .member-center {
+        width: 100%; } }
+    .member-group .member-center .title {
+      color: #848484;
+      font: normal normal medium 20px/30px SF Pro Text;
+      margin-bottom: 28px; }
+      @media (max-width: 414px) {
+        .member-group .member-center .title {
+          display: none; } }
+    @media (max-width: 414px) {
+      .member-group .member-center .member-list {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; } }
+    .member-group .member-center .member-list li + li {
+      margin-top: 24px; }
+      @media (max-width: 414px) {
+        .member-group .member-center .member-list li + li {
+          margin-top: 0; } }
+    .member-group .member-center .member-list a {
+      color: #848484;
+      font: normal normal medium 16px/24px PingFang TC; }
+    .member-group .member-center .member-list .default {
+      border-bottom: 2px solid #916000; }
+  .member-group .data-modify {
+    width: 55%;
+    color: #818a91; }
+    @media (max-width: 414px) {
+      .member-group .data-modify {
+        width: 100%;
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1; } }
+    .member-group .data-modify .title {
+      color: #000;
+      font: normal normal medium 16px/24px PingFang TC;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #818a91; }
+    .member-group .data-modify form {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-top: 20px; }
+    .member-group .data-modify label {
+      width: 15%;
+      font: normal normal normal 16px/22px PingFang TC; }
+      @media (max-width: 414px) {
+        .member-group .data-modify label {
+          width: 25%; } }
+    .member-group .data-modify .block {
+      display: block; }
+    .member-group .data-modify input,
+    .member-group .data-modify select {
+      border: 1px solid #ced4da;
+      border-radius: 4px; }
+    .member-group .data-modify input {
+      width: 350px;
+      padding: 10px; }
+      @media (max-width: 414px) {
+        .member-group .data-modify input {
+          width: 255px; } }
+      .member-group .data-modify input::-webkit-input-placeholder {
+        font: normal normal normal 16px/19px SF Pro Text; }
+      .member-group .data-modify input::-moz-placeholder {
+        font: normal normal normal 16px/19px SF Pro Text; }
+      .member-group .data-modify input:-ms-input-placeholder {
+        font: normal normal normal 16px/19px SF Pro Text; }
+      .member-group .data-modify input::-ms-input-placeholder {
+        font: normal normal normal 16px/19px SF Pro Text; }
+      .member-group .data-modify input::placeholder {
+        font: normal normal normal 16px/19px SF Pro Text; }
+    .member-group .data-modify select {
+      width: 160px;
+      padding: 8px 4px;
+      color: #818a91;
+      font: normal normal normal 16px/22px PingFang TC; }
+      @media (max-width: 414px) {
+        .member-group .data-modify select {
+          width: 80px; } }
+    @media (max-width: 414px) {
+      .member-group .data-modify .col-md {
+        width: 160px; } }
+    .member-group .data-modify .wd {
+      width: 60px; }
+    .member-group .data-modify .bn {
+      border: none; }
+    .member-group .data-modify .mt {
+      margin-top: 10px; }
+    .member-group .data-modify .m0 {
+      margin-top: 0; }
+    .member-group .data-modify .ml {
+      margin-left: 10px; }
+    .member-group .data-modify .checkbox {
+      width: 15px; }
+    .member-group .data-modify .align-item-start {
+      -ms-flex-item-align: start;
+          align-self: start; }
+    .member-group .data-modify .memo {
+      font: normal normal normal 16px/24px PingFang TC; }
+    .member-group .data-modify .submit {
+      width: 160px;
+      display: block;
+      color: #fff;
+      padding: 8px 0;
+      font: normal normal normal 16px/22px PingFang TC;
+      background-color: #916000;
+      border-radius: 4px;
+      text-align: center;
+      margin-top: 16px; }
+    .member-group .data-modify .password-modify {
+      margin-top: 48px; }
+  .member-group .member-info {
+    width: 25%; }
+    @media (max-width: 414px) {
+      .member-group .member-info {
+        width: 100%;
+        padding: 40px 0; } }
+    .member-group .member-info span {
+      color: #8d8d8d; }
+    .member-group .member-info .text {
+      font: normal normal normal 16px/22px PingFang TC; }
+    .member-group .member-info .code {
+      font: normal normal medium 20px/30px SF Pro Text;
+      margin-left: 6px; }
+    .member-group .member-info .member-item {
+      margin-top: 24px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .member-group .member-info .member-item .item {
+        width: 35%; }
+        .member-group .member-info .member-item .item li {
+          color: #818a91;
+          font: normal normal normal 16px/24px PingFang TC; }
+        .member-group .member-info .member-item .item li + li {
+          margin-top: 16px; }
+      .member-group .member-info .member-item .quantity {
+        width: 65%; }
+        .member-group .member-info .member-item .quantity li {
+          color: #818a91;
+          font: normal normal normal 16px/24px PingFang TC; }
+        .member-group .member-info .member-item .quantity li + li {
+          margin-top: 16px; }
+    .member-group .member-info .plan {
+      color: #818a91;
+      font: normal normal normal 14px/21px PingFang TC; }
+
+/*# sourceMappingURL=all.css.map */
